@@ -131,16 +131,20 @@ class HomePage extends StatelessWidget {
 
             for(int i=0; i < articlesMap.length; i++){
 
-              articles.add(ArticleItem(article: Article(
-                  name: articlesMap[i]['source']['name'],
-                  author: articlesMap[i]['author'],
-                  title: articlesMap[i]['title'],
-                  description: articlesMap[i]['description'],
-                  url: articlesMap[i]['url'],
-                  urlToImage: articlesMap[i]['urlToImage'],
-                  publishedAt: articlesMap[i]['publishedAt'],
-                  content: articlesMap[i]['content']
-              ),));
+              if(articlesMap[i]['urlToImage'] != null && (i%2 != 0)){
+
+                articles.add(ArticleItem(article: Article(
+                    name: articlesMap[i]['source']['name'],
+                    author: articlesMap[i]['author'],
+                    title: articlesMap[i]['title'],
+                    description: articlesMap[i]['description'],
+                    url: articlesMap[i]['url'],
+                    urlToImage: articlesMap[i]['urlToImage'],
+                    publishedAt: articlesMap[i]['publishedAt'],
+                    content: articlesMap[i]['content']
+                ),));
+
+              }
 
             }
 

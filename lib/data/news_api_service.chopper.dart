@@ -16,10 +16,10 @@ class _$NewsApiService extends NewsApiService {
 
   Future<Response> getNews(
       {String q = "bitcoin",
-      String from = "2020-09-17",
+      String from = "2020-10-27",
       String sort = "publishedAt",
       String apiKey = "b51ea2d0b00346969c1e8e0bf95591d1"}) {
-    final $url = 'everything/';
+    final $url = '/';
     final Map<String, dynamic> $params = {
       'q': q,
       'from': from,
