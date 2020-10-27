@@ -2,6 +2,14 @@
 
 Flutter application to fine crypto currencies articles on [https://newsapi.org/]
 
+<img src="https://github.com/llastkrakw/crypto_news/blob/master/assets/app_image/Screenshot_2020-10-27-14-58-39-105_com.example.news.jpg"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+     
+<img src="https://github.com/llastkrakw/crypto_news/blob/master/assets/app_image/Screenshot_2020-10-27-14-58-45-131_com.example.news.jpg"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+
 # Build with : 
 
 - Chopper
