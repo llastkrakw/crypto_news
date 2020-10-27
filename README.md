@@ -1,6 +1,14 @@
-# news
+# Crypto news app
 
-A new Flutter application.
+Flutter application to fine crypto currencies articles.
+
+# Build with : 
+
+- Chopper
+- Provider
+- Flutter_skeleton
+- url_launcher
+- Share
 
 ## Getting Started
 
