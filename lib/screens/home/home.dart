@@ -1,4 +1,3 @@
-import 'dart:collection';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -115,29 +114,35 @@ class HomePage extends StatelessWidget {
     return FutureBuilder<Response>(
 
       future: Provider.of<NewsApiService>(context).getNews(),
+
       builder: (context, snapshot){
 
-        if(snapshot.connectionState == ConnectionState.done && snapshot.data.statusCode == 200){
-
-          var  articlesJson = json.decode(snapshot.data.bodyString);
-
-          var articlesMap = articlesJson["articles"];
+        if(snapshot.connectionState == ConnectionState.done){
 
           List<Widget> articles = new List();
 
+          print(snapshot);
 
-          for(int i=0; i < articlesMap.length; i++){
+          if(snapshot.data != null){
 
-            articles.add(ArticleItem(article: Article(
-              name: articlesMap[i]['source']['name'],
-              author: articlesMap[i]['author'],
-              title: articlesMap[i]['title'],
-              description: articlesMap[i]['description'],
-              url: articlesMap[i]['url'],
-              urlToImage: articlesMap[i]['urlToImage'],
-              publishedAt: articlesMap[i]['publishedAt'],
-              content: articlesMap[i]['content']
-            ),));
+            var  articlesJson = json.decode(snapshot.data.bodyString);
+
+            var articlesMap = articlesJson["articles"];
+
+            for(int i=0; i < articlesMap.length; i++){
+
+              articles.add(ArticleItem(article: Article(
+                  name: articlesMap[i]['source']['name'],
+                  author: articlesMap[i]['author'],
+                  title: articlesMap[i]['title'],
+                  description: articlesMap[i]['description'],
+                  url: articlesMap[i]['url'],
+                  urlToImage: articlesMap[i]['urlToImage'],
+                  publishedAt: articlesMap[i]['publishedAt'],
+                  content: articlesMap[i]['content']
+              ),));
+
+            }
 
           }
 
@@ -155,6 +160,8 @@ class HomePage extends StatelessWidget {
 
         }
         else{
+
+          print(snapshot.connectionState);
 
           return GridView.count(
                 shrinkWrap: true,
