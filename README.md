@@ -1,6 +1,6 @@
 # Crypto news app
 
-Flutter application to fine crypto currencies articles.
+Flutter application to fine crypto currencies articles on [https://newsapi.org/]
 
 # Build with : 
 
