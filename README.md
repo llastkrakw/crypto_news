@@ -6,6 +6,9 @@ Flutter application to fine crypto currencies articles.
 
 - Chopper
 - Provider
+- Flutter_skeleton
+- url_launcher
+- Share
 
 ## Getting Started
 
